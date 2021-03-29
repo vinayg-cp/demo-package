@@ -179,3 +179,20 @@ Change the `alias` to point to where those packages are actually installed. This
 ```
 
 An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+
+## Issue with PostCSS
+
+[Stackoverflow](https://stackoverflow.com/questions/64057023/error-postcss-plugin-autoprefixer-requires-postcss-8-update-postcss-or-downgra)
+Downgrade your autoprefixer to version 9, use
+
+```
+"autoprefixer": "^9.0.0"
+```
+
+in your dev dependencies.
+
+Need to update it back to ^10.0.0 or latest.
+
+Typerror in storybook:
+[Issue](https://stackoverflow.com/questions/66082397/typeerror-this-getoptions-is-not-a-function)
+Downgraded sass loader to 10.1.1
