@@ -1,4 +1,5 @@
 import React, { HTMLAttributes, ReactChild } from 'react';
+import './app.scss';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
@@ -15,5 +16,9 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 }; */
 
 export const Thing = ({ children }: Props) => {
-  return <div>{children || `the snozzberries taste like snozzberries`}</div>;
+  return (
+    <div className="styledThing">
+      {children || `the snozzberries taste like snozzberries`}
+    </div>
+  );
 };

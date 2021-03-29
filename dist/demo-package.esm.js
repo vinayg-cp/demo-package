@@ -12,7 +12,13 @@ import React from 'react';
 
 var Thing = function Thing(_ref) {
   var children = _ref.children;
-  return React.createElement("div", null, children || "the snozzberries taste like snozzberries");
+  return React.createElement(
+    'div',
+    {
+      className: 'styledThing',
+    },
+    children || 'the snozzberries taste like snozzberries'
+  );
 };
 
 export { Thing };
