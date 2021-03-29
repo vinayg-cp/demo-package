@@ -30,13 +30,12 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "tsdx lint --fix"
+      "yarn format:staged && tsdx lint --fix"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn format:staged"
+      "pre-commit": "lint-staged"
     }
   },
   "prettier": {
